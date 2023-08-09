@@ -6,6 +6,9 @@ winget upgrade --all
 # Update git for windows
 git update-git-for-windows
 
+# Update bicep
+az bicep upgrade
+
 # Update Ubuntu software in WSL
 $scriptPath = split-path -parent $MyInvocation.MyCommand.Definition
 $scriptPath = $scriptPath.Replace("C:", "/mnt/c").Replace([System.IO.Path]::DirectorySeparatorChar, "/")

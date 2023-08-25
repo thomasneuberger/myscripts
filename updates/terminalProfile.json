@@ -1,0 +1,23 @@
+{
+    "altGrAliasing": true,
+    "antialiasingMode": "grayscale",
+    "closeOnExit": "automatic",
+    "colorScheme": "Campbell",
+    "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe \"%USERPROFILE%\\update-all.ps1\"",
+    "cursorShape": "bar",
+    "elevate": true,
+    "font": 
+    {
+        "face": "Cascadia Mono",
+        "size": 12.0
+    },
+    "guid": "{f655bbe2-8d7d-4dbf-91cc-d5cacbed0523}",
+    "hidden": false,
+    "historySize": 9001,
+    "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
+    "name": "Update All",
+    "padding": "8, 8, 8, 8",
+    "snapOnInput": true,
+    "startingDirectory": "%USERPROFILE%",
+    "useAcrylic": false
+}

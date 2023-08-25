@@ -7,7 +7,7 @@ param (
 #Requires -RunAsAdministrator
 
 # Update Windows software
-winget upgrade --all
+winget upgrade --all --silent
 
 # Update git for windows
 # git update-git-for-windows

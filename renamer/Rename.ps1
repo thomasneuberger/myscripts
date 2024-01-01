@@ -1,6 +1,6 @@
 [CmdletBinding()]
 param (
-    [Parameter()]
+    [Parameter(Mandatory)]
     [string]
     $FolderPath,
     [Parameter()]
@@ -10,6 +10,12 @@ param (
     [switch]
     $whatIf
 )
+
+if (-not [System.IO.Directory]::Exists($FolderPath)) {
+    Write-Host "Ordner $FolderPath existiert nicht." -ForegroundColor Red
+    return
+}
+
 if ([string]::IsNullOrWhiteSpace($filePrefix)) {
     Write-Host Wie sollen die Dateien heissen?
     $filePrefix = Read-Host

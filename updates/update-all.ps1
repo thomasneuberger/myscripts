@@ -29,15 +29,15 @@ if ($updateWsl){
     foreach ($distro in $ubuntuDistros) {
         Write-Host "Update WSL-Distrobution $distro..." -ForegroundColor Green
 
-        wsl --exec cp $scriptPath/update-all.sh /home/thomas/update-all.sh
-        wsl --exec chmod +X /home/thomas/update-all.sh
+        wsl --distribution "$distro" --exec cp $scriptPath/update-all.sh /home/thomas/update-all.sh
+        wsl --distribution "$distro" --exec chmod +X /home/thomas/update-all.sh
         if ($repairWslDns){
             [string]$repairDnsParameter = "y"
         }
         else{
             [string]$repairDnsParameter = "n"
         }
-        wsl --exec sudo /home/thomas/update-all.sh "$scriptPath" $repairDnsParameter
+        wsl --distribution "$distro" --exec sudo /home/thomas/update-all.sh "$scriptPath" $repairDnsParameter
     }
 
 }
